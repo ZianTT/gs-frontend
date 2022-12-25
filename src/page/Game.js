@@ -100,7 +100,7 @@ function FlagInput({do_reload_list, ch}) {
                         </Tooltip> :
                         '提交 Flag：'
                 }
-                placeholder="flag{...}"
+                placeholder="flag{This_is_an_example_flag_and_don't_share_your_flag!--from Tangping Cup Organizing Committee}"
                 enterButton={<><FlagOutlined /> 提交</>}
                 onSearch={do_submit}
                 loading={loading}
@@ -164,8 +164,8 @@ function Challenge({ch, do_reload_list}) {
                 }
                 {!!ch.metadata.first_blood_award_eligible &&
                     <Tag color="default">
-                        <a href="#/board/first_pku">
-                            <b><FireOutlined /> 解题先锋奖</b>
+                        <a href="#/board/first_all">
+                            <b><FireOutlined /> 一血奖</b>
                         </a>
                     </Tag>
                 }
@@ -393,8 +393,6 @@ export function Game() {
                 <div className="landing-login-form">
                     <Card type="inner" size="small" bordered={false}>
                         <b>报名参赛：</b>
-                        <Button type="primary" onClick={()=>to_auth('pku/redirect')}><HomeOutlined /> 北京大学登录</Button>
-                        {' '}
                         <Button onClick={()=>window.location.href='#/login/other'}><GlobalOutlined /> 校外选手</Button>
                     </Card>
                 </div>

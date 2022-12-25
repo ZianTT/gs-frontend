@@ -2,7 +2,7 @@ import {useNavigate, useLocation} from 'react-router-dom';
 import {Menu} from 'antd';
 import {
     UnorderedListOutlined, CrownOutlined, NotificationOutlined, UserOutlined, LoginOutlined, CaretDownOutlined,
-    EditOutlined, FileProtectOutlined, DisconnectOutlined, HomeOutlined, GlobalOutlined, HistoryOutlined
+    EditOutlined, FileProtectOutlined, DisconnectOutlined, HomeOutlined, GlobalOutlined, HistoryOutlined, GithubOutlined
 } from '@ant-design/icons';
 
 import {useGameInfo} from '../logic/GameInfo';
@@ -66,8 +66,9 @@ export function Header() {
                                 </>}
                                 className="header-nav-login" popupClassName="header-nav-popup"
                             >
-                                <Menu.Item key="_/login/pku" onClick={()=>to_auth('pku/redirect')}><HomeOutlined /> 北京大学登录</Menu.Item>
-                                <Menu.Item key="/login/other"><GlobalOutlined /> 校外选手</Menu.Item>
+                                <Menu.Item key="_/login/other" onClick={()=>to_auth('github/login')}><GithubOutlined /> GitHub登录</Menu.Item>
+                                <Menu.Item key="_/login/other/union" onClick={()=>to_auth('geeunion/login')}><HomeOutlined /> 统一身份验证登录</Menu.Item>
+                                <Menu.Item key="/login/other"><GlobalOutlined /> 其他</Menu.Item>
                             </Menu.SubMenu>
                         }
                     </Menu>

@@ -101,17 +101,13 @@ function UserProfileForm() {
                     <br />
                     <Alert type="error" showIcon message="由于违反规则，你的参赛资格已被取消。如有疑问请联系工作人员。" />
                 </>}
-                {info.user.group==='other' && <>
-                    <br />
-                    <Alert type="info" showIcon message="你的身份不是北京大学在校学生，将不参与评奖。如有疑问请联系工作人员。" />
-                </>}
             </Card>
             <br />
             <Card title="联系方式" {...card_style}>
                 <Form name="contact" {...form_style}>
                     {info.user.profile.tel!==undefined &&
                         <Form.Item name="tel" label="电话号码">
-                            <Input maxLength={20} {...input_style} />
+                            <Input maxLength={11} placeholder="请填写您的手机号，以便我们对您进行作弊复核，请保持电话畅通" {...input_style} />
                         </Form.Item>
                     }
                     {info.user.profile.email!==undefined &&
@@ -125,10 +121,6 @@ function UserProfileForm() {
                         </Form.Item>
                     }
                 </Form>
-                {info.user.group==='pku' && <>
-                    <br />
-                    <Alert type="info" showIcon message="请正确填写以便赛后联系和颁奖，同时请加入选手 QQ 群 691076890" />
-                </>}
             </Card>
             <br />
             <Card title="其他信息" {...card_style}>

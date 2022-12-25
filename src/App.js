@@ -56,8 +56,6 @@ function BoardRouter() {
     return (
         <div>
             <Menu className="router-menu" selectedKeys={[name]} onSelect={(e)=>{nav(`/board/${e.key}`);}} mode="horizontal">
-                <Menu.Item key="score_pku"><FundOutlined /> 北京大学排名</Menu.Item>
-                <Menu.Item key="first_pku"><AimOutlined /> 北京大学一血榜</Menu.Item>
                 <Menu.Item key="score_all"><FundOutlined /> 总排名</Menu.Item>
                 <Menu.Item key="first_all"><AimOutlined /> 总一血榜</Menu.Item>
             </Menu>
@@ -108,7 +106,7 @@ export function App() {
                         <Route exact path="/game" element={<Game />} />
                         <Route exact path="/game/:challenge" element={<Game />} />
 
-                        <Route exact path="/board" element={<Navigate to="/board/score_pku" replace />} />
+                        <Route exact path="/board" element={<Navigate to="/board/score_all" replace />} />
                         <Route exact path="/board/:name" element={<BoardRouter />} />
 
                         <Route exact path="/info" element={<Navigate to="/info/announcements" replace />} />

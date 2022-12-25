@@ -1,13 +1,15 @@
 import {CONTEST_LICENSE} from '../branding';
 import {ExtLink} from '../utils';
-import {Card} from 'antd';
+import {Card , Collapse} from 'antd';
+
+const { Panel } = Collapse;
 
 export function License() {
     return (
         <div className="slim-container">
             <h1>开源许可证</h1>
-            <Card>
-                <p><b>关于本平台的使用许可：</b></p>
+            <Collapse>
+                <Panel header="比赛平台使用了由PKUGGG开发的Project Guiding Star，使用MIT协议开源，以下是关于比赛平台的使用许可：">
                 <p>
                     Guiding Star 是为了 PKU GeekGame 而开发的 CTF 比赛平台，<ExtLink href="https://github.com/PKU-GeekGame/guiding-star">在 GitHub 开放源代码</ExtLink>。
                 </p>
@@ -51,7 +53,8 @@ export function License() {
                 <p>
                     平台后端部分使用的第三方组件列表参见后端代码。
                 </p>
-            </Card>
+                </Panel>
+            </Collapse>
             <br />
             <Card>
                 <p><b>关于比赛内容的使用许可：</b></p>

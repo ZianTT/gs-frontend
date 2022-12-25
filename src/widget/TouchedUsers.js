@@ -29,8 +29,7 @@ function TouchedUsersModal({ch}) {
                     </>
                     )}
                     filters={[
-                        {text: '北京大学选手', value: 'pku'},
-                        {text: '其他选手', value: 'other'},
+                        {text: '正常参赛选手', value: 'other'},
                     ]}
                     onFilter={(value, record)=>(
                         value==='pku'? record.group_disp==='北京大学' :
